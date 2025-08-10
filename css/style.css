@@ -9,6 +9,14 @@
 body {
     line-height: 1.6;
     min-height: 100vh;
+
+    
+}
+.tt {
+    color: #c18204;
+    font-size: 3rem;
+    text-align: right;
+    margin: 1rem 0;
 }
 
 header {
@@ -39,17 +47,18 @@ nav a {
 
 .pieds {
 
-    height: 200px;
+    height: 100px;
 }
 .copy {
     color: #070707;
     text-align: center;
     padding: 1rem;
     margin: 0;
+    height: 2px;
 }
 
 .yoka  {
-    background: url('../images/photo_de_hotel_en_fond.jpg') no-repeat center/cover;
+     background-image: url('../images/home.jpg');
     height: 500px;
     display: flex;
     flex-direction: column;
