@@ -5,31 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hôtel Residence MBEKA - Accueil</title>
     <link rel="stylesheet" href="css/style.css">
+
+   
+    <!-- Lien vers le fichier CSS pour le formulaire de connexion -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Script pour la gestion de l'authentification -->
+    <script defer src="javascript/auth.js"></script>
 </head>
 <body>
-    <header>
+   
+    <header >
+        
+    
+        <!-- Espace pour menu -->
+  <button id="menu">
+    <img src="images/menu.png" alt="menu">
+  </button>
+
+  <!-- Sidebar liste des services-->
+  <div class="sidebar" id="sidebar">
+    <!-- fermer sidebar-->
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <ul>
+      <li><a href="ac.html">Accueil</a></li>
+      <li><a href="chambre.html">Chambres</a></li>
+      <li><a href="restaurant.html">restaurant</a></li>
+      <li><a href="#">Appartements meublés</a></li>
+      <li><a href="#">Salle de réunion</a></li>
+      <li><a href="#">Piscine</a></li>
+      <li><a href="#">Parking sécurisé</a></li>
+    </ul>
+  </div>
+
+
+        <img src="images/log.jpg" alt="logo" class="logo">
         <h1 class="tt">Hôtel Residence MBEKA</h1>
         <nav>
             <ul>
-                <li><a href="ac.html">Accueil</a></li>
-                <li><a href="chambre.html">Chambres</a></li>
-                <li><a href="restaurant.html">restaurant</a></li>
+                <li><a href="" class="btn" id="connexion">connexion</a></li>
                 <li><a href="https://wa.me/237699548614" class="btn" id="whatsapp">Nous contacter</a></li>
             </ul>
         </nav>
+         <script src="javascript/script.js"></script>
     </header>
     <main>
-        <section class="yoka">
-            <h2>Bienvenue dans notre hôtel de luxe</h2>
+        <section id="acceuil">
+            <h1>Hôtel Residence MBEKA</h1>
             <p>Détendez-vous dans un cadre exceptionnel.</p>
+        </section>
+        <section id="chambre">
+    <!-- images des chambres -->
+        </section>
+        <section id="restaurant">
+    <!-- images du restaurant, menu... -->
+        </section>
+        <section id="appat">
+    <!-- images Appartements meublés -->
+        </section>
+        <section id="vip">
+    <!-- images chambre vip -->
+        </section>
+        <section id="sl-reunion">
+    <!-- images salle de réunion -->
+        </section>
+        <section id="piscine">
+    <!-- images piscine -->
         </section>
     </main>
     <footer class="pieds">
+ <p class="copy">&copy; 2025 Hôtel Residence MBEKA. Tous droits réservés.</p>
+        </footer>
 
-        
-    </footer> 
-    <div>
-        <p class="copy">&copy; 2025 Hôtel Residence MBEKA. Tous droits réservés.</p>
-    </div>
+
 </body>
 </html>

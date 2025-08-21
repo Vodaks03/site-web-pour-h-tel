@@ -5,12 +5,34 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
-    line-height: 1.6;
-    min-height: 100vh;
+    background-image: url('../images/fond.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    }
 
-    
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        filter: blur(3px) brightness(0.7);
+        z-index: -1;
+        pointer-events: none;
+    }
+.logo {
+    height:100px; 
+    width:auto; 
+    max-width:180px; 
+    object-fit:contain; 
+    display:block;
 }
 .tt {
     color: #c18204;
@@ -20,12 +42,14 @@ body {
 }
 
 header {
-    background: #333;
+    background:  white;
     color: #fff;
     padding: 1rem;
     display:flex; 
     justify-content: space-between;
     align-items: center;
+    
+
 }
 
 nav ul {
@@ -41,32 +65,36 @@ nav a {
     color: #fff;
     text-decoration: navajowhite;
 }
+/* style des bouttons connexion et contacter*/
 #whatsapp {
-    background-color: rgb(11, 209, 24);
+    background-color: green;
+}
+#connexion {
+    background-color: green;
 }
 
-.pieds {
-
-    height: 100px;
-}
 .copy {
-    color: #070707;
+    color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0rem;
     margin: 0;
     height: 2px;
 }
 
-.yoka  {
-     background-image: url('../images/home.jpg');
+#acceuil {
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #0e0e0e;
+    color: #c18204;
     padding: 0 2rem;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+ font-size: 20;
 }
 
 .btn {
@@ -84,6 +112,7 @@ footer {
     text-align: center;
     padding: 1rem;
     margin: 0;
+    height: 50px;
 }
 .liste-chm {
     display: flex;
@@ -106,4 +135,112 @@ footer {
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+    /* Style du bouton logo */
+    #menu {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #menu img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Sidebar cachée par défaut */
+    .sidebar {
+      position: fixed;
+      left: -250px; /* caché hors écran */
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: white;
+      transition: left 0.3s ease;
+      padding-top: 60px;
+    }
+
+    /* Quand active */
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .close-btn{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+    }
+
+
+
+    /* Styles pour les modals */
+#loginModal, #registerModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
